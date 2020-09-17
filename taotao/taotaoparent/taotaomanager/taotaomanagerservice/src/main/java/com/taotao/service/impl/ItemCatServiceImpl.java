@@ -7,6 +7,7 @@ import com.taotao.pojo.TbItemCatExample;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,8 +15,8 @@ import java.util.List;
  * 商品类目service
  */
 @Service
-public class ItemCatService implements com.taotao.service.ItemCatService{
-    @Autowired
+public class ItemCatServiceImpl implements com.taotao.service.ItemCatService{
+    @Resource
     TbItemCatMapper catMapper;
 
     @Override
