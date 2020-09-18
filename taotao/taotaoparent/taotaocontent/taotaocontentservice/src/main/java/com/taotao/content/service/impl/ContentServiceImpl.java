@@ -43,4 +43,13 @@ public class ContentServiceImpl implements ContentService {
         result.setTotal(pageInfo.getTotal());
         return result;
     }
+
+    @Override
+    public List<TbContent> getContentByCid(long cid) {
+        TbContentExample example = new TbContentExample();
+        TbContentExample.Criteria criteria = example.createCriteria();
+        criteria.andCategoryIdEqualTo(cid);
+        List<TbContent> list = contentMapper.selectByExample(example);
+        return list;
+    }
 }
