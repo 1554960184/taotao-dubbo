@@ -13,6 +13,8 @@
         <module>taotaomanagerweb</module>
         <module>taotaoportalweb</module>
         <module>taotaocontent</module>
+        <module>taotaosearch</module>
+        <module>taotaosearchweb</module>
     </modules>
     <packaging>pom</packaging>
     <!-- 集中定义依赖版本号 -->
