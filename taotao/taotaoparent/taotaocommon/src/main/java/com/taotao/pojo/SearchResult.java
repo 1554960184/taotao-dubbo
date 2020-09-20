@@ -1,8 +1,9 @@
 package com.taotao.pojo;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class SearchResult {
+public class SearchResult implements Serializable{
     private long totalPages;
     private long recordCount;
     private List<SearchItem> itemList;
