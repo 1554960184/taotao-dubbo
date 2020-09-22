@@ -10,7 +10,7 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 
 	<!-- 加载属性文件 -->
-	<context:property-placeholder location="classpath:resource/resource.properties"/>
+	<context:property-placeholder location="classpath:resource/*.properties"/>
 	<!-- 配置注解驱动 -->
 	<mvc:annotation-driven />
 	<!-- 视图解析器 -->
@@ -19,6 +19,16 @@
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
+	<!--freemarker的配置-->
+	<!-- freemarker的配置 -->
+	<bean id="freeMarkerConfigurer" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+		<property name="templateLoaderPath" value="/WEB-INF/ftl/"/>
+		<property name="defaultEncoding" value="utf-8"></property>
+	</bean>
+	<!--<bean id="freeMarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfig">
+		<property name="templateLoaderPath" value="/WEB-INF/ftl"/>
+		<property name="defaultEncoding" value="UTF-8" />
+	</bean>-->
 	<!-- 配置包扫描器，扫描@Controller注解的类 -->
 	<context:component-scan base-package="com.taotao.item.controller"/>
 
