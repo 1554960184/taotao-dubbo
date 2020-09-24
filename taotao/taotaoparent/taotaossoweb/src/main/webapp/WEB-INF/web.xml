@@ -43,7 +43,7 @@
 	<servlet-mapping>
 		<servlet-name>taotao-sso-web</servlet-name>
 		<!-- 拦截所有请求jsp除外 -->
-		<url-pattern>*.html</url-pattern>
+		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 	
 </web-app>
