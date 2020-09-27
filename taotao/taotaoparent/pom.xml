@@ -19,6 +19,8 @@
         <module>taotaosso</module>
         <module>taotaossoweb</module>
         <module>taotaocartweb</module>
+        <module>taotaoorder</module>
+        <module>taotaoorderweb</module>
     </modules>
     <packaging>pom</packaging>
     <!-- 集中定义依赖版本号 -->
